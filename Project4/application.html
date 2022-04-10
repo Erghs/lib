@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/appcss.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="signupSection">
+        <div class="info">
+          <h2>Отправьте заявку</h2>
+          <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+          <p>Мы разместим вашу любимую книгу у нас на сайте</p>
+        </div>
+        <form action="app.html" class="signupForm" name="signupform">
+          <h2>Отправить заявку</h2>
+          <ul class="noBullet">
+            <li>
+            
+              <input type="text" class="inputFields " id="name" name="lname" placeholder="ФИО автора" value="" required/>
+            </li>
+            <li>
+            
+              <input type="text" class="inputFields " id="book" name="username" placeholder="Имя произведения" value=""  required/>
+            </li>
+            <li>
+            
+              <input type="text" class="inputFields" id="izd" name="text" placeholder="Издательство" value="" required/>
+            </li>
+            <li id="center-btn" >
+              <button id="join-btn" name="join" alt="" value="Отправить" onclick="saveInformation()">Отправить</button>
+            
+            </li>
+          </ul>
+        </form>
+      </div>
+
+     
+<script src="/js/app.js"></script>
+
+</body>
+</html>

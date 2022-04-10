@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <title>Тест</title>
+</head>
+<body>
+    <div class="home_box custom_box ">
+        <h3>Тест по роману Толстого "Война и мир"</h3>
+        <p>Вопросов <span class="total_question">5</span></p>
+        <button type="button" class="btn" onclick="startQuiz()">Начать тест</button>
+    </div>
+    <div class="quiz_box custom_box hide">
+        <div class="question_number">
+            <h3>
+                Вопрос
+                <span id="number_of_question"> </span>
+                из
+                <span id="number_of_all_questions"></span>
+            </h3>
+        </div>
+        <div class="question_text" ></div>
+        <div class="option_container">
+        </div>
+        <div class="next_question_btn">
+            <button type="button" class="btn" onclick="next()" >Дальше</button>
+        </div>
+        <div class="answers_indicator" >
+        </div>
+    </div>
+
+    <div class="result_box custom_box hide" >
+            <h1>Результат</h1>
+
+        <table>
+            <tr>
+                <td>Вопросов:</td>
+                <td> <span class="total_question" id="total_question1"></span>    </td>
+            </tr>
+            <tr>
+                <td>Попытка:</td>
+                <td> <span class="total_attempt" id="total_attempt1"></span>    </td>
+            </tr>
+            <tr>
+                <td>Правильных ответов:</td>
+                <td> <span class="total_correct" id="total_correct1"></span>    </td>
+            </tr>
+            <tr>
+                <td>Ошибки:</td>
+                <td> <span class="total_wrong" id="total_wrong1"></span>></span>    </td>
+            </tr>
+            <tr>
+                <td>Процент:</td>
+                <td> <span class="percentage" id="percentage1"></span>    </td>
+            </tr>
+            <tr>
+                <td>Счет:</td>
+                <td> <span class="total_score" id="total_score1"></span>    </td>
+            </tr>
+        </table>
+            <button type="button" class="btn" onclick="tryAgainQuiz()">Попробовать снова</button>
+            <button type="button" class="btn" onclick="backToHome()">Домой</button>
+
+        </div>
+    </div>
+
+    <script  src="js/testing.js"></script>
+    <script src="js/question.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+body{
+    margin:0;
+    font-size: 16px;
+    background-image: url("../img/original.jpg");
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.custom_box::after,
+.custom_box::before{
+    content: '';
+    clear: both;
+    display: table;
+}
+.custom_box{
+    max-width: 700px;
+    background-color: #fff;
+    margin:40px auto;
+    padding:30px;
+    border-radius:10px;
+
+}
+
+.custom_box.hide{
+    display: none;
+}
+.home_box h3{
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+
+}
+.home_box p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    color: #000;
+    font-weight: 400;
+}
+
+.home_box p span{
+    font-weight: 500;
+}
+.home_box .btn{
+    margin-top: 20px;
+}
+
+.btn{
+    padding: 15px 45px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.quiz_box .question_number,
+.quiz_box .question_text,
+.quiz_box .option_container,
+.quiz_box .answers_indicator,
+.quiz_box .next_question_btn{
+    width: 100%;
+    float: left;
+
+}
+
+
+
+.quiz_box .question_number{
+    font-size: 18px;
+    color: #009688;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+
+}
+.quiz_box .question_text{
+    font-size: 22px;
+    color: #000;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 20px 0;
+    margin: 0;
+
+}
+.quiz_box .option_container {}
+.quiz_box .option_container .option{
+    background-color: #ccc;
+    padding:13px 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity:0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+
+}
+.quiz_box .option_container .option.already-answered{
+    pointer-events: none;
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.quiz_box .option_container .option.correct::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+.quiz_box .option_container .option.wrong::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+.quiz_box .option_container .option.wrong{
+    color: #fff;
+}
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-100%);
+    }100%{
+        transform: translateX(0%);
+    }
+}
+.quiz_box .option_container .option.correct{
+    color: #fff;
+}
+.quiz_box .btn{
+    margin: 15px 0 ;
+}
+.quiz_box .answers_indicator {
+    border-top: 1px solid #ccc;
+}
+.quiz_box .answers_indicator div{
+    height: 40px;
+    width: 50px;
+    display: inline-block;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+}
+.quiz_box .answers_indicator div.correct{
+    background-image: url(../img/complete.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.quiz_box .answers_indicator div.wrong{
+    background-image: url(../img/цкщтп.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.result_box{
+    text-align: center;
+   
+}
+.result_box .hide{
+    display: none;
+}
+
+
+.result_box h1{
+  font-size: 36px;
+  line-height: 42px;
+  color: #009688;
+}
+
+.result_box table{
+    width: 100%;
+    border-collapse: collapse;
+    margin:30px 0;
+}
+.result_box table td{
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000;
+    width: 50%;
+    text-align: left;
+    font-style: 18px;
+}
+.result_box .btn{
+    margin-right: 20px;
+}
+
+@media (max-width:767px) {
+    .result_box .btn{
+        margin-bottom:15px ;
+    }
+    body{
+        padding: 15px;
+    }    
+}
+
+
+
+
